@@ -1,4 +1,4 @@
-# Gifinder
+# Progressive Web App
 
 _Made for Progressive Web App @ cmda-minor-web 2020 - 2021_
 
@@ -9,13 +9,13 @@ _Made for Progressive Web App @ cmda-minor-web 2020 - 2021_
 ## :pencil2: App description
 
 <!-- Always wanted to quickly search for a specific GIF? **_Gifinder_** is here! By simply typing a word of choice, you will get 24 GIFs that meet your requirements!
-By clicking on one of the GIFs, you will see that GIF's title, posted time, original source and a link to view the GIF at [Giphy.com](https://giphy.com)
+By clicking on one of the GIFs, you will see that GIF's title, posted time, original source and a link to view the GIF at [Giphy.com](https://giphy.com) -->
 
-[**_Gifinder_** can be viewed right here](https://gifinder-lisaoude.netlify.app/)
+[**_My work_** can be viewed right here](https://pwa-lisaoude.netlify.app/)
 
 <br/>
 
-I have also made a [Wiki](https://github.com/lisaoude/Gifinder/wiki), where I kept a weekly log, explained some things about map, filter & reduce and made some JavaScript related annotations.
+<!-- I have also made a [Wiki](https://github.com/lisaoude/Gifinder/wiki), where I kept a weekly log, explained some things about map, filter & reduce and made some JavaScript related annotations.
 
 <br/>  -->
 
