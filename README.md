@@ -259,9 +259,8 @@ We all know creative developing projects are never _truly_ done..
 These are some next steps that I would love to make:
 
 - [x] Install node.js
-- [x] Install express.js
-- [x] Install npm
-- [x] Fix terminal
+- [ ] Install express.js
+- [ ] Fix terminal
 
 <!-- - Make it possible for the user to save gifs, in the following ways:
 
@@ -287,6 +286,7 @@ These are some next steps that I would love to make:
 
 - Schepenaar, W. (2018, June 12). Server-side vs Client-side Routing. Retrieved March 8, 2021, from [Medium](https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f)
 - Ian Schoonover. (2020, June 27). How to Install Node JS on Windows 10. Retrieved March 8, 2021, from [YouTube](https://www.youtube.com/watch?v=AuCuHvgOeBY)
+- Traversy Media. (2017, May 27). Node.js & Express From Scratch - App Setup & Express Install. Retrieved March 8, 2021, from [YouTube](https://www.youtube.com/watch?v=sB3acNJeNKE)
 
 <!-- In this course we will convert the client side web application previously made Web App From Scratch into a server side rendered application. We also add functionalities based on the Service Worker and turn the application into a Progressive Web App. Ultimately we are going to implement a series of optimisations to improve the performance of the application.
 
