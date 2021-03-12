@@ -1,8 +1,10 @@
-# :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark:
+# :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark:
 
 ## Ik heb nog geen voor het vak relevante code geschreven
 
-## Ik ben druk bezig met tutorials volgen (server side is helemaal nieuw voor mij)
+## Ik ben druk bezig met tutorials volgen
+
+### (server side is helemaal nieuw voor mij)
 
 ### Komt goed, maar valt niet veel te reviewen nu :(
 
@@ -269,8 +271,8 @@ We all know creative developing projects are never _truly_ done..
 These are some next steps that I would love to make:
 
 - [x] Install node.js
+- [x] Fix terminal
 - [ ] Install express.js
-- [ ] Fix terminal
 
 <!-- - Make it possible for the user to save gifs, in the following ways:
 
