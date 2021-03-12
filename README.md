@@ -1,3 +1,13 @@
+# :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark:
+
+## Ik heb nog geen voor het vak relevante code geschreven
+
+## Ik ben druk bezig met tutorials volgen (server side is helemaal nieuw voor mij)
+
+### Komt goed, maar valt niet veel te reviewen nu :(
+
+---
+
 # Progressive Web App
 
 _Made for Progressive Web App @ cmda-minor-web 2020 - 2021_
@@ -286,7 +296,8 @@ These are some next steps that I would love to make:
 
 - Schepenaar, W. (2018, June 12). Server-side vs Client-side Routing. Retrieved March 8, 2021, from [Medium](https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f)
 - Ian Schoonover. (2020, June 27). How to Install Node JS on Windows 10. Retrieved March 8, 2021, from [YouTube](https://www.youtube.com/watch?v=AuCuHvgOeBY)
-- Traversy Media. (2017, May 27). Node.js & Express From Scratch - App Setup & Express Install. Retrieved March 8, 2021, from [YouTube](https://www.youtube.com/watch?v=sB3acNJeNKE)
+- Installing Express. (2021). Retrieved March 8, 2021, from [Expressjs.com](http://expressjs.com/en/starter/installing.html)
+- Node.js Crash Course Tutorial. (2020). Retrieved March 8, 2021, from [YouTube](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU)
 
 <!-- In this course we will convert the client side web application previously made Web App From Scratch into a server side rendered application. We also add functionalities based on the Service Worker and turn the application into a Progressive Web App. Ultimately we are going to implement a series of optimisations to improve the performance of the application.
 
@@ -321,3 +332,66 @@ Goals: Convert application to a Progressive Web App
 Doel: Optimize the Critical Rendering Path
 [Exercises](https://github.com/cmda-minor-web/progressive-web-apps-2021/blob/master/course/week-3.md)
 [Critical Rendering Path - slides Declan Rek](https://github.com/cmda-minor-web/progressive-web-apps-1920/blob/master/course/cmd-2020-critical-rendering-path.pdf) -->
+
+<!--
+
+Notes Node.js Crash Course
+
+## #2 - Node.js Basics
+### Browser VS Node
+In the browser
+- Window is the global object
+  - Like window.setTimeout
+  - Window can be left out, because its presence is implied
+
+In node
+- Window is **not** the global object
+  - **Global** is the global object
+  - Represents the global context in a node environment
+
+
+### Global object
+As can be seen above, the global object in node is different from the global object in window.
+This means that most of the things in the window object we can't excess in node, such as DOM methods like the querySelector.
+
+
+### Dirname & Filename
+- dirname = directory name
+  - gets the absolute path of the current folder that the file is in
+
+- filename
+  - gets the absolute path of the current folder that the file is in **WITH** the file name added on
+
+
+## #3 - Clients & Servers
+### IP addresses and domains
+GET Request
+- Is made every time we go to a different webpage, either by a link or typing it directly into the address bar
+- We're sending a **GET Request** to the server to get a certain resource (like an HTML webpage)
+  - Communication via HTTP
+
+POST Request
+- Used to send data to a server from something like a webform
+
+
+### Creating a server
+In node, you manually create a server which lives on the back-end of your website.
+This server listens for requests from the browser and then decide what responses to send to the browser.
+
+
+### Localhost & Port numbers
+Localhost
+- Like a domain name you'd use on the web
+
+Port numbers
+- Like a door into a computer
+
+
+
+## #4 - Requests & Responses
+### Request object
+
+### Response object
+- What we use to send a response to the browser
+
+-->
