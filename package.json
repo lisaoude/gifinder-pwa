@@ -1,0 +1,23 @@
+{
+  "name": "progressive-web-apps-2021",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "files.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisaoude/progressive-web-apps-2021.git"
+  },
+  "author": "Lisa Oude Elferink",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lisaoude/progressive-web-apps-2021/issues"
+  },
+  "homepage": "https://github.com/lisaoude/progressive-web-apps-2021#readme"
+}
