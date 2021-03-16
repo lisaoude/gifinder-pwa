@@ -1,4 +1,6 @@
 const express = require('express');
+const fetch = require('node-fetch');
+require('dotenv').config();
 
 // express app
 const app = express();
@@ -9,16 +11,30 @@ app.use(express.static('static'));
 // register view engine 
 app.set('view engine', 'ejs');
 
+// internals
+const url = process.env.URL;
+const trendingType = process.env.TRENDING_TYPE;
+const key = process.env.KEY;
+const limit = process.env.LIMIT;
+
 // listen for requests
 app.listen(3000);
 
 // routing
 app.get('/', (req, res) => {
-  res.render('index', { 
-    title: 'Home',
-    headTwo: 'Get a Gif!'
-   });
+  fetch(`${url}${trendingType}?&api_key=${key}&limit=${limit}`)
+  .then (async response => {
+    const data = await response.json()
+    console.log(data)
+    res.render('index', {
+      title: 'Home',
+      headTwo: 'Get a Gif!'
+    });
+  });
 });
+
+
+
 
 app.get('/gif:id', (req, res) => {
   res.render('detail', { 
