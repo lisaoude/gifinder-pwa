@@ -258,9 +258,7 @@ This repository is licensed as [MIT](https://github.com/lisaoude/progressive-web
 We all know creative developing projects are never _truly_ done..  
 These are some next steps that I would love to make:
 
-- [x] Install node.js
-- [x] Fix terminal
-- [ ] Install express.js
+- [ ] :)
 
 <!-- - Make it possible for the user to save gifs, in the following ways:
 
