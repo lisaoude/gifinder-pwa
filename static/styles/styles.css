@@ -95,7 +95,7 @@ button {
   height: 10em;
 }
   
-#homePage form {
+form {
   width: calc( 1.25 * var(--default-width));
   height: 12em;
   display: flex;
@@ -104,7 +104,7 @@ button {
   margin-bottom: 2.5em;
 }
   
-#homePage form input {
+form input {
     width: auto;
     height: 2em;
     padding: 10px 15px;
@@ -112,7 +112,7 @@ button {
     border-radius: 5px;
 }
   
-#homePage form button {
+form button {
     width: var(--default-width);
     height: 3em;
     padding: 10px;
@@ -123,7 +123,7 @@ button {
     font-weight: 400;
 }
   
-#homePage form button:hover {
+form button:hover {
     transform: scale(1.02);
 }
   

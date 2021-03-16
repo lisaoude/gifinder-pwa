@@ -3,16 +3,20 @@
 
   <%- include('./partials/head.ejs') %>
 
-<main>
   <body>
-    <h1>Hello</h1>
-    <h2>This is for the tutorial</h2>
+    <main>
+      <%- include('./partials/nav.ejs') %>
 
-    <%- include('./partials/nav.ejs') %>
+      <%- include('./partials/header.ejs') %>
 
-    <%- include('./partials/footer.ejs') %>
+      <%- include('./partials/form.ejs') %>
 
+      <section id="gifContainer">
+      </section>
+
+      <%- include('./partials/footer.ejs') %>
+
+    </main>
   </body>
-</main>
   
 </html>

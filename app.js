@@ -14,11 +14,17 @@ app.listen(3000);
 
 // routing
 app.get('/', (req, res) => {
-  res.render('index', { title: 'Home' });
+  res.render('index', { 
+    title: 'Home',
+    headTwo: 'Get a Gif!'
+   });
 });
 
-app.get('/about', (req, res) => {
-  res.render('about', { title: 'About' });
+app.get('/gif:id', (req, res) => {
+  res.render('detail', { 
+    title: 'Detail',
+    headTwo: 'gif name'
+  });
 });
 
 app.get('/blog', (req, res) => {
