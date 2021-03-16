@@ -1,8 +1,8 @@
-# Progressive Web App
+# Gifinder as a Progressive Web App
 
 _Made for Progressive Web App @ cmda-minor-web 2020 - 2021_
 
-<!-- mock up pictures ? -->
+![Gifinder Mockups](https://user-images.githubusercontent.com/57795294/109716112-b23b0f00-7ba4-11eb-93fd-34428f5c9a32.png)
 
 <!-------------------------- New Paragraph -------------------------->
 

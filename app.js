@@ -12,14 +12,12 @@ app.use(express.static('static'));
 app.set('view engine', 'ejs');
 
 // internals
+const PORT = process.env.PORT || 3000;
 const url = process.env.URL;
-const urlMedia = process.env.URL_MEDIA;
 const trendingType = process.env.TRENDING_TYPE;
 const key = process.env.KEY;
 const limit = process.env.LIMIT;
 
-// listen for requests
-app.listen(3000);
 
 
 // routing
@@ -67,4 +65,11 @@ app.get('/blog', (req, res) => {
 // at the bottom, so it only shows if it doesn't match any of the above
 app.use((req, res) => {
   res.render('404', { title: '404' });
+});
+
+
+
+// listen for requests
+app.listen(PORT, () => {
+  console.log(`App is launched on  http://localhost:${PORT}`)
 });
