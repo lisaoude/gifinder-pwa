@@ -1,15 +1,3 @@
-# :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark:
-
-## Ik heb nog geen voor het vak relevante code geschreven
-
-## Ik ben druk bezig met tutorials volgen
-
-### (server side is helemaal nieuw voor mij)
-
-### Komt goed, maar valt niet veel te reviewen nu :(
-
----
-
 # Progressive Web App
 
 _Made for Progressive Web App @ cmda-minor-web 2020 - 2021_
