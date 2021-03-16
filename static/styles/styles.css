@@ -1,0 +1,366 @@
+/*****************************************/
+/*                 GENERAL               */
+/*****************************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
+
+* {
+  margin: 0rem;
+  padding: 0rem;
+}
+  
+:root {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  --default-width: 15em;
+  --default-height: 15em;
+  --light-color: #ffffff;
+  --dark-color: #181818;
+}
+  
+body {
+  background: linear-gradient(-225deg, #050044, #000AFF, #1572FF, #64B5FF);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+  
+main {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 3em;
+}
+  
+  
+  
+/********************/
+/*    TYPOGRAPHY    */
+/*******************/
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+button {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--light-color);
+}
+  
+input {
+  color: var(--dark-color);
+}
+  
+h1 {
+  font-weight: 900;
+  font-size: 4em;
+}
+  
+h2 {
+  font-weight: 800;
+  font-size: 2.5em;
+}
+  
+h3 {
+  font-weight: 800;
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+  
+h4 {
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1em;
+}
+  
+input {
+  font-weight: 400;
+  font-size: 1rem;
+}
+  
+button {
+  font-weight: 600;
+  font-size: 1.06em;
+}
+  
+  
+  
+/*****************************************/
+/*           HOME PAGE STYLING           */
+/*****************************************/
+#homePage header {
+  width: auto;
+  height: 10em;
+}
+  
+#homePage form {
+  width: calc( 1.25 * var(--default-width));
+  height: 12em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 2.5em;
+}
+  
+#homePage form input {
+    width: auto;
+    height: 2em;
+    padding: 10px 15px;
+    border: solid 0.5px #000000;
+    border-radius: 5px;
+}
+  
+#homePage form button {
+    width: var(--default-width);
+    height: 3em;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--dark-color);
+    font-size: 1em;
+    font-weight: 400;
+}
+  
+#homePage form button:hover {
+    transform: scale(1.02);
+}
+  
+/* section with gifs */
+#homePage #gifContainer {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 1em;
+    grid-row-gap: 4em;
+    margin-bottom: 3em;
+}
+  
+/* gifs */
+#homePage #gifContainer a {
+    max-width: var(--default-width);
+    max-height: var(--default-height);
+}
+    
+#homePage #gifContainer img {
+    max-width: var(--default-width);
+    max-height: var(--default-height);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 10px rgba(40, 40, 40, 0.4);
+}
+  
+/* hover over gifs */
+#homePage #gifContainer img:hover {
+    transform: scale(1.035);
+    box-shadow: 0px 0px 20px 10px rgba(225, 225, 225, 0.4);
+}
+  
+/*****************************************/
+/*          DETAIL PAGE STYLING          */
+/*****************************************/
+/* header */
+#detailPage header {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 11em;  
+    margin-bottom: 2em;
+}
+  
+#detailPage header h2 {
+    font-weight: 600;
+    font-size: 2em;     
+}
+  
+/* back button */
+#detailPage header a {
+    width: 5em;
+    height: 5em;
+}
+  
+#detailPage header a div {
+    position: relative;
+    top: 18px;
+    left: 5px;
+    width: 40px;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 2em;
+}
+  
+#detailPage header a div::before {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: -5px;
+    width: 20px;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transform: rotate(45deg)
+}
+  
+#detailPage header a div::after {
+    position: absolute;
+    content: "";
+    top: -5px;
+    left: -5px;
+    width: 20px;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transform: rotate(-45deg)
+}
+  
+/* section */
+#detailPage #detailContainer {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+    
+/* gifs */
+#detailPage #detailContainer img {
+    width: calc(1.5 * var(--default-width));
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 10px rgba(40, 40, 40, 0.4);
+    margin-right: 3em;
+}
+  
+/* details */
+#detailSection p {
+    margin-bottom: 1em;
+}
+  
+#detailSection a {
+    text-decoration: none;
+}
+  
+  
+  
+/*****************************************/
+/*                 FOOTER                */
+/*****************************************/
+footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5em 0em 1em 0em;
+}
+  
+footer p {
+    color: black;
+    font-size: 0.8em;
+    margin: 0.6em;
+}
+  
+footer img {
+    width: calc( 0.35 * var(--default-width));
+    height: auto;
+    margin-bottom: 0.75em;
+}
+  
+  
+  
+/*****************************************/
+/*             LOADING STATE             */
+/*****************************************/
+span {
+    position: absolute;
+    top: 29em;
+    left: 8em;
+    color: #ffffff;
+}
+  
+.hide {
+    visibility: hidden;
+    z-index: -1;
+} 
+  
+/* 
+#loader {
+    position: absolute;
+    top: 29em;
+    left: 10em;
+    width: 90px;
+    height: 90px;
+  }
+  
+  #loader::after {
+    content: " ";
+    display: block;
+    width: 65px;
+    height: 65px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: loader 1.5s linear infinite;
+  } */ 
+  
+  
+/*****************************************/
+/*                ANIMATIONS             */
+/*****************************************/
+/* background gradient */
+@keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+}
+  
+/* spinning loader */
+@keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+  
+  
+/*****************************************/
+/*              SMALL SCREEN             */
+/*****************************************/
+@media screen and (max-width: 660px) {
+  
+span {
+      left: 4em;
+}
+  
+#detailPage header {
+      margin-bottom: 3em;
+}
+  
+#detailPage header h2 {
+      font-size: 1.5em;     
+}
+    
+#detailPage #detailContainer {
+      flex-direction: column;
+}
+  
+#detailPage #detailContainer img {
+      width: var(--default-width);
+      height: auto;
+      margin-bottom: 2em;
+}
+}
+  
