@@ -3,15 +3,25 @@
 
   <%- include('./partials/head.ejs') %>
 
-  <body>
+  <body id='index'>
     <main>
       <%- include('./partials/nav.ejs') %>
 
       <%- include('./partials/header.ejs') %>
 
-      <%- include('./partials/form.ejs') %>
+      <!-- maybe later? for now just mvp -->
+      <!-- <%- include('./partials/form.ejs') %> -->
 
       <section id="gifContainer">
+
+        <% props.forEach(item => { %>
+
+          <a href="/gif/<%= item.id %>">
+            <img src="https://media.giphy.com/media/<%= item.id %>/giphy.gif" alt="<%= item.title %>">
+          </a>
+
+        <% }); %>
+
       </section>
 
       <%- include('./partials/footer.ejs') %>

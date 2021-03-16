@@ -3,35 +3,29 @@
 
   <%- include('./partials/head.ejs') %>
 
-  <body>
+  <body id='detail'>
     <main>
       <%- include('./partials/nav.ejs') %>
 
       <%- include('./partials/header.ejs') %>
 
-      <section>
-        <section>
+      <section id='all'>
+       
+        <img src="<%= gif %>">
+        
+        <section id='detailSection'>
+          <h3>Gif Details</h3>
 
-          <!-- add img src -->
-          <img src="">
+          <h4>Posted at</h4>
+          <p><%= postTime %></p>
+
+          <h4>Orginal source</h4>
+            <p><%= source %></p>
+
+          <a href="<%= viewGiphy %>">
+            <h4>Wanna view on Giphy.com? Click!</h4>
+          </a>
         </section>
-
-        <h3>Gif Details</h3>
-
-        <!-- add posted time -->
-        <h4>Posted at</h4>
-        <p></p>
-
-        <!-- add link as href & as p -->
-        <h4>Orginal source</h4>
-        <a href="">
-          <p></p>
-        </a>
-
-        <!-- add giphy link to href-->
-        <a href="">
-          <h4>Wanna view on Giphy.com? Click!</h4>
-        </a>
 
       </section>
 

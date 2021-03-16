@@ -286,6 +286,8 @@ These are some next steps that I would love to make:
 - Ian Schoonover. (2020, June 27). How to Install Node JS on Windows 10. Retrieved March 8, 2021, from [YouTube](https://www.youtube.com/watch?v=AuCuHvgOeBY)
 - Installing Express. (2021). Retrieved March 8, 2021, from [Expressjs.com](http://expressjs.com/en/starter/installing.html)
 - Node.js Crash Course Tutorial. (2020). Retrieved March 8, 2021, from [YouTube](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU)
+- npm: dotenv. (2019, October 16). Retrieved March 16, 2021, from [NPM.js](https://www.npmjs.com/package/dotenv)
+- npm: node-fetch. (2020, September 5). Retrieved March 16, 2021, from [NPM.js](https://www.npmjs.com/package/node-fetch)
 
 <!-- In this course we will convert the client side web application previously made Web App From Scratch into a server side rendered application. We also add functionalities based on the Service Worker and turn the application into a Progressive Web App. Ultimately we are going to implement a series of optimisations to improve the performance of the application.
 

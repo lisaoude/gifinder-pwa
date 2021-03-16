@@ -13,6 +13,7 @@ app.set('view engine', 'ejs');
 
 // internals
 const url = process.env.URL;
+const urlMedia = process.env.URL_MEDIA;
 const trendingType = process.env.TRENDING_TYPE;
 const key = process.env.KEY;
 const limit = process.env.LIMIT;
@@ -20,28 +21,43 @@ const limit = process.env.LIMIT;
 // listen for requests
 app.listen(3000);
 
+
 // routing
+// in modules later?
 app.get('/', (req, res) => {
   fetch(`${url}${trendingType}?&api_key=${key}&limit=${limit}`)
   .then (async response => {
     const data = await response.json()
-    console.log(data)
+
     res.render('index', {
+      props: data.data,
       title: 'Home',
-      headTwo: 'Get a Gif!'
+      headTwo: 'The most popular gifs right now'
+
+      // search for gifs, for later? for now just mvp
+      // headTwo: 'Get a Gif!'
     });
   });
 });
 
 
 
+app.get('/gif/:id', (req, res) => {
+  fetch(`${url}${req.params.id}?&api_key=${key}`)
+  .then (async response => {
+    const data = await response.json()
 
-app.get('/gif:id', (req, res) => {
-  res.render('detail', { 
-    title: 'Detail',
-    headTwo: 'gif name'
+    res.render('detail', { 
+      title: 'Detail',
+      headTwo: data.data.title,
+      gif: `https://media.giphy.com/media/${req.params.id}/giphy.gif`,
+      postTime: data.data.import_datetime,
+      source: data.data.source,
+      viewGiphy: data.data.bitly_url
+    });
   });
 });
+
 
 app.get('/blog', (req, res) => {
   res.render('blog', { title: 'Blog' });
