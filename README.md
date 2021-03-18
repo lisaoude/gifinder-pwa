@@ -2,7 +2,7 @@
 
 _Made for Progressive Web App [@ cmda-minor-web 2020 - 2021](https://github.com/cmda-minor-web)_
 
-![Gifinder Mockups](https://user-images.githubusercontent.com/57795294/109716112-b23b0f00-7ba4-11eb-93fd-34428f5c9a32.png)
+![Gifinder Mockups](https://user-images.githubusercontent.com/57795294/111635461-c7947800-87f7-11eb-94dc-198ce14e6aaa.png)
 
 <!-------------------------- New Paragraph -------------------------->
 
