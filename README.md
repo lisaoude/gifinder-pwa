@@ -1,6 +1,6 @@
 # Gifinder as a Progressive Web App
 
-_Made for Progressive Web App @ cmda-minor-web 2020 - 2021_
+_Made for Progressive Web App [@ cmda-minor-web 2020 - 2021](https://github.com/cmda-minor-web)_
 
 ![Gifinder Mockups](https://user-images.githubusercontent.com/57795294/109716112-b23b0f00-7ba4-11eb-93fd-34428f5c9a32.png)
 
@@ -13,6 +13,8 @@ By clicking on one of the GIFs, you will see that GIF's title, posted time, orig
 
 <!-- Always wanted to quickly search for a specific GIF? **_Gifinder_** is here! By simply typing a word of choice, you will get 24 GIFs that meet your requirements!
 By clicking on one of the GIFs, you will see that GIF's title, posted time, original source and a link to view the GIF at [Giphy.com](https://giphy.com) -->
+
+Gifinder is a server side rendering application.
 
 [**_My work_** can be viewed right here](https://gifinder-pwa.herokuapp.com/)
 
@@ -27,10 +29,10 @@ By clicking on one of the GIFs, you will see that GIF's title, posted time, orig
 ## :pushpin: Table of Contents
 
 <!-- - [What does this Web App do?](#gem-What-does-this-Web-App-do?) -->
-<!-- - [API](#link-API) -->
-<!-- - [Diagrams](#chart_with_upwards_trend-Diagrams) -->
-<!-- - [Folders & Files](#open_file_folder-Folders-&-files) -->
-<!-- - [Install](#inbox_tray-Install) -->
+
+- [API](#link-API)
+  <!-- - [Folders & Files](#open_file_folder-Folders-&-files) -->
+  <!-- - [Install](#inbox_tray-Install) -->
 
 - [License](#closed_lock_with_key-License)
 - [Next Steps](#telescope-Next-Steps)
@@ -52,7 +54,7 @@ By clicking on one of the GIFs, you will see that GIF's title, posted time, orig
 
 <!-------------------------- New Paragraph -------------------------->
 
-<!-- ## :link: API
+## :link: API
 
 ### :question: Which API did I use?
 
@@ -86,8 +88,8 @@ I have implemented the following points into **_Gifinder_**:
 **Home page**
 
 - Show trending GIFs to users on load of the page
-- Let the user search for GIFs, using a word or phrase
-- Show the user the gifs they searched for using a word or phrase
+<!-- - Let the user search for GIFs, using a word or phrase
+- Show the user the gifs they searched for using a word or phrase -->
 
 <br/>
 
@@ -95,21 +97,7 @@ I have implemented the following points into **_Gifinder_**:
 
 - Generate a GIF by ID endpoint
 
-<br/> -->
-
-<!-------------------------- New Paragraph -------------------------->
-
-<!-- ## :chart_with_upwards_trend: Diagrams
-
-### Actor Diagram
-
-![Actor Diagram](https://user-images.githubusercontent.com/57795294/109714885-3b514680-7ba3-11eb-99ba-8e92a7a33fcb.png)
-
-### Interaction Diagram
-
-![Interaction Diagram](https://user-images.githubusercontent.com/57795294/109714880-3ab8b000-7ba3-11eb-85e4-a989ececc287.png)
-
-<br/> -->
+<br/>
 
 <!-------------------------- New Paragraph -------------------------->
 
@@ -261,7 +249,7 @@ This repository is licensed as [MIT](https://github.com/lisaoude/progressive-web
 We all know creative developing projects are never _truly_ done..  
 These are some next steps that I would love to make:
 
-- [ ] :)
+- [ ] Make it possible to let the users search for GIFs
 
 <!-- - Make it possible for the user to save gifs, in the following ways:
 
