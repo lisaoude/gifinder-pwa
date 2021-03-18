@@ -21,7 +21,7 @@ const limit = process.env.LIMIT;
 
 
 // routing
-// in modules later?
+// in modules later
 app.get('/', (req, res) => {
   fetch(`${url}${trendingType}?&api_key=${key}&limit=${limit}`)
   .then (async response => {
