@@ -8,10 +8,13 @@ _Made for Progressive Web App @ cmda-minor-web 2020 - 2021_
 
 ## :pencil2: App description
 
+Always wanted to quickly see the trending GIFs? **_Gifinder_** is here! On load, you will get 24 GIFs that meet your requirements!
+By clicking on one of the GIFs, you will see that GIF's title, posted time, original source and a link to view the GIF at [Giphy.com](https://giphy.com)
+
 <!-- Always wanted to quickly search for a specific GIF? **_Gifinder_** is here! By simply typing a word of choice, you will get 24 GIFs that meet your requirements!
 By clicking on one of the GIFs, you will see that GIF's title, posted time, original source and a link to view the GIF at [Giphy.com](https://giphy.com) -->
 
-[**_My work_** can be viewed right here](https://pwa-lisaoude.netlify.app/)
+[**_My work_** can be viewed right here](https://gifinder-pwa.herokuapp.com/)
 
 <br/>
 
