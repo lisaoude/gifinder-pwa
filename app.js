@@ -6,7 +6,7 @@ require('dotenv').config();
 const app = express();
 
 // css file
-app.use(express.static('static'));
+app.use(express.static('public'));
 
 // register view engine 
 app.set('view engine', 'ejs');
@@ -24,36 +24,36 @@ const limit = process.env.LIMIT;
 // in modules later
 app.get('/', (req, res) => {
   fetch(`${url}${trendingType}?&api_key=${key}&limit=${limit}`)
-  .then (async response => {
-    const data = await response.json()
+    .then(async response => {
+      const data = await response.json()
 
-    res.render('index', {
-      props: data.data,
-      title: 'Home',
-      headTwo: 'The most popular gifs right now'
+      res.render('index', {
+        props: data.data,
+        title: 'Home',
+        headTwo: 'The most popular gifs right now'
 
-      // search for gifs, for later? for now just mvp
-      // headTwo: 'Get a Gif!'
+        // search for gifs, for later? for now just mvp
+        // headTwo: 'Get a Gif!'
+      });
     });
-  });
 });
 
 
 
 app.get('/gif/:id', (req, res) => {
   fetch(`${url}${req.params.id}?&api_key=${key}`)
-  .then (async response => {
-    const data = await response.json()
+    .then(async response => {
+      const data = await response.json()
 
-    res.render('detail', { 
-      title: 'Detail',
-      headTwo: data.data.title,
-      gif: `https://media.giphy.com/media/${req.params.id}/giphy.gif`,
-      postTime: data.data.import_datetime,
-      source: data.data.source,
-      viewGiphy: data.data.bitly_url
+      res.render('detail', {
+        title: 'Detail',
+        headTwo: data.data.title,
+        gif: `https://media.giphy.com/media/${req.params.id}/giphy.gif`,
+        postTime: data.data.import_datetime,
+        source: data.data.source,
+        viewGiphy: data.data.bitly_url
+      });
     });
-  });
 });
 
 
