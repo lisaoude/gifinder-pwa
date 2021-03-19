@@ -11,13 +11,13 @@ app.use(express.static('public'));
 // register view engine 
 app.set('view engine', 'ejs');
 
+
 // internals
 const PORT = process.env.PORT || 3000;
 const url = process.env.URL;
 const trendingType = process.env.TRENDING_TYPE;
 const key = process.env.KEY;
 const limit = process.env.LIMIT;
-
 
 
 // routing
@@ -39,7 +39,6 @@ app.get('/', (req, res) => {
 });
 
 
-
 app.get('/gif/:id', (req, res) => {
   fetch(`${url}${req.params.id}?&api_key=${key}`)
     .then(async response => {
@@ -57,16 +56,21 @@ app.get('/gif/:id', (req, res) => {
 });
 
 
-app.get('/blog', (req, res) => {
-  res.render('blog', { title: 'Blog' });
+app.get('/offline', (req, res) => {
+  res.render('offline', {
+    title: 'Offline',
+    headTwo: 'you are currently offline'
+  });
 });
+
 
 // 404 page
 // at the bottom, so it only shows if it doesn't match any of the above
 app.use((req, res) => {
-  res.render('404', { title: '404' });
+  res.render('404', {
+    title: '404'
+  });
 });
-
 
 
 // listen for requests
