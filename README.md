@@ -32,8 +32,7 @@ Gifinder is a server side rendering application.
 
 - [API](#link-API)
   <!-- - [Folders & Files](#open_file_folder-Folders-&-files) -->
-  <!-- - [Install](#inbox_tray-Install) -->
-
+- [Install](#inbox_tray-Install)
 - [License](#closed_lock_with_key-License)
 - [Next Steps](#telescope-Next-Steps)
 - [Resources](#books-Resources)
@@ -98,6 +97,21 @@ I have implemented the following points into **_Gifinder_**:
 - Generate a GIF by ID endpoint
 
 <br/>
+
+### :end: Endpoint & parameters
+<!-- The API that was used is the API supplied by The Movie DB. These are public APIs and can be found at the link below:
+
+https://developers.themoviedb.org/3/
+
+This has been my 'standard' endpoint to which several parameters have been added to retrieve the data. The parameters below were used to obtain the various information:
+
+discover/movie
+movie/${movieID}
+movie/${movieID}/recommendations
+movie/${movieID}/watch/providers
+search/movie
+Based on these parameters, it can be seen that I show discovery movies, a specific movie, recommended movies based on a specific movie, the places where this specific movie can be viewed and the user can search for movies. -->
+
 
 <!-------------------------- New Paragraph -------------------------->
 
@@ -198,41 +212,40 @@ import {
 
 <!-------------------------- New Paragraph -------------------------->
 
-<!-- ## :inbox_tray: Install
+## :inbox_tray: Install
 
 ### 1. :dancers: Cone this repo
 
 Before we can get started, we'll need to clone this repo.
 This can be done by typing the following line of code into your terminal:
 
-`git clone https://github.com/lisaoude/Gifinder`
+`git clone https://github.com/lisaoude/gifinder-pwa.git`
 
 <br/>
 
-### 2. :computer: Install an http server
+### 2. :computer: Install package
 
-Next, we will have to install an http server.
-Type the following line of code into your terminal:
+Next, we will have to install the used packages.
 
-`npm install http-server`
+`npm install `
 
 <br/>
 
-### 3. :running: Run the app with our http server
+### 3. :arrow_forward: Start local dev environment
 
 This can be done by typing the following line of code into your terminal:
 
-`htpp-server PATH-TO-DIRECTORY/Gifinder`
+`npm run dev`
 
 <br/>
 
-### 4. :globe_with_meridians: Open browser and navigate to localhost
+### 4. :european_post_office: Build export
 
 Almost done! We just need to navigate to the localhost in the browser.
 
-`http://127.0.0.1:5500/`
+`npm run build`
 
-<br/> -->
+<br/>
 
 <!-------------------------- New Paragraph -------------------------->
 
@@ -276,9 +289,10 @@ These are some next steps that I would love to make:
 - Schepenaar, W. (2018, June 12). Server-side vs Client-side Routing. Retrieved March 8, 2021, from [Medium](https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f)
 - Ian Schoonover. (2020, June 27). How to Install Node JS on Windows 10. Retrieved March 8, 2021, from [YouTube](https://www.youtube.com/watch?v=AuCuHvgOeBY)
 - Installing Express. (2021). Retrieved March 8, 2021, from [Expressjs.com](http://expressjs.com/en/starter/installing.html)
-- Node.js Crash Course Tutorial. (2020). Retrieved March 8, 2021, from [YouTube](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU)
+- The Net Ninja. (2020).  Node.js Crash Course Tutorial. Retrieved March 8, 2021, from [YouTube](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU)
 - npm: dotenv. (2019, October 16). Retrieved March 16, 2021, from [NPM.js](https://www.npmjs.com/package/dotenv)
 - npm: node-fetch. (2020, September 5). Retrieved March 16, 2021, from [NPM.js](https://www.npmjs.com/package/node-fetch)
+- The Net Ninja. (2019). PWA Tutorial for Beginners. Retrieved March 22, 2021, from [YouTube](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gTxqJBcDmoi5Q2pzDusSL7)
 
 <!-- In this course we will convert the client side web application previously made Web App From Scratch into a server side rendered application. We also add functionalities based on the Service Worker and turn the application into a Progressive Web App. Ultimately we are going to implement a series of optimisations to improve the performance of the application.
 
