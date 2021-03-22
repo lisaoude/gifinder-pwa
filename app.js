@@ -75,5 +75,5 @@ app.use((req, res) => {
 
 // listen for requests
 app.listen(PORT, () => {
-  console.log(`App is launched on  http://localhost:${PORT}`)
+  console.log(`App is launched on http://localhost:${PORT}`)
 });

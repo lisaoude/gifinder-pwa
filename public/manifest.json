@@ -1,16 +1,10 @@
 {
-    "short_name": "Gifinder",
-    "name": "Gifinder PWA",
-    "description": "Simple PWA with Node.js fetching API data",
-    "icons": [
-        {
-            "src": "/images/gifinder_favicon.png",
-            "type": "image/png",
-            "sizes": "16x16"
-        }
-    ],
-    "start_url": "/",
-    "display": "standalone",
-    "scope": "/",
-    "theme_color": "#000AFF"
+  "name": "Gifinder",
+  "short_name": "Gifinder",
+  "description": "The most popular gifs right now",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1572FF",
+  "theme_color": "000AFF",
+  "orientation": "portrait-primary"
 }
