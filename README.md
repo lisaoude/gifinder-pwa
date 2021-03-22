@@ -4,6 +4,8 @@ _Made for Progressive Web App [@ cmda-minor-web 2020 - 2021](https://github.com/
 
 ![Gifinder Mockups](https://user-images.githubusercontent.com/57795294/111635461-c7947800-87f7-11eb-94dc-198ce14e6aaa.png)
 
+---
+
 <!-------------------------- New Paragraph -------------------------->
 
 ## :pencil2: App description
@@ -24,6 +26,8 @@ Gifinder is a server side rendering application.
 
 <br/>  -->
 
+---
+
 <!-------------------------- New Paragraph -------------------------->
 
 ## :pushpin: Table of Contents
@@ -32,12 +36,15 @@ Gifinder is a server side rendering application.
 
 - [API](#link-API)
   <!-- - [Folders & Files](#open_file_folder-Folders-&-files) -->
+- [Used Packages](#gift-Used-Packages)
 - [Install](#inbox_tray-Install)
 - [License](#closed_lock_with_key-License)
 - [Next Steps](#telescope-Next-Steps)
 - [Resources](#books-Resources)
 
 <br/>
+
+---
 
 <!-------------------------- New Paragraph -------------------------->
 
@@ -50,6 +57,8 @@ Gifinder is a server side rendering application.
 - Provide the user with feedback when hovering over a GIF
 
 <br/>  -->
+
+---
 
 <!-------------------------- New Paragraph -------------------------->
 
@@ -110,8 +119,10 @@ movie/${movieID}
 movie/${movieID}/recommendations
 movie/${movieID}/watch/providers
 search/movie
-Based on these parameters, it can be seen that I show discovery movies, a specific movie, recommended movies based on a specific movie, the places where this specific movie can be viewed and the user can search for movies. -->
+Based on these parameters, it can be seen that I show discovery movies, a specific movie, recommended movies based on a specific movie, the places where this specific movie can be viewed and the user can search for movies.
 
+---
+-->
 
 <!-------------------------- New Paragraph -------------------------->
 
@@ -208,7 +219,16 @@ import {
 
 - This file is used to trigger the router and get Gifinder started.
 
-<br/> -->
+<br/> 
+
+---
+-->
+
+<!-------------------------- New Paragraph -------------------------->
+
+### :gift: Used packages
+
+---
 
 <!-------------------------- New Paragraph -------------------------->
 
@@ -247,6 +267,8 @@ Almost done! We just need to navigate to the localhost in the browser.
 
 <br/>
 
+---
+
 <!-------------------------- New Paragraph -------------------------->
 
 ## :closed_lock_with_key: License
@@ -254,6 +276,8 @@ Almost done! We just need to navigate to the localhost in the browser.
 This repository is licensed as [MIT](https://github.com/lisaoude/progressive-web-apps-2021/blob/master/LICENSE) by © Lisa Oude Elferink, 2021
 
 <br/>
+
+---
 
 <!-------------------------- New Paragraph -------------------------->
 
@@ -281,6 +305,8 @@ These are some next steps that I would love to make:
 - Suggest searches to users -->
 
 <br/>
+
+---
 
 <!-------------------------- New Paragraph -------------------------->
 
