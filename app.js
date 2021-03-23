@@ -1,18 +1,19 @@
+// Externals
 const express = require('express');
 const fetch = require('node-fetch');
+var compression = require('compression');
 require('dotenv').config();
 
-// express app
+// Express app
 const app = express();
 
-// css file
+// Middleware & Static files
 app.use(express.static('public'));
-
-// register view engine 
+app.use(compression());
 app.set('view engine', 'ejs');
 
 
-// internals
+// Internals
 const PORT = process.env.PORT || 3000;
 const url = process.env.URL;
 const trendingType = process.env.TRENDING_TYPE;
