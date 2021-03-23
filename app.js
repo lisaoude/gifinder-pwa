@@ -1,78 +1,21 @@
 // Externals
 const express = require('express');
 const fetch = require('node-fetch');
-var compression = require('compression');
+const compression = require('compression');
 require('dotenv').config();
-
-// Express app
 const app = express();
+
+// Routes
+const routes = require("./router/routes");
 
 // Middleware & Static files
 app.use(express.static('public'));
 app.use(compression());
 app.set('view engine', 'ejs');
-
+app.use(routes);
 
 // Internals
-const PORT = process.env.PORT || 3000;
-const url = process.env.URL;
-const trendingType = process.env.TRENDING_TYPE;
-const key = process.env.KEY;
-const limit = process.env.LIMIT;
-
-
-// routing
-// in modules later?
-app.get('/', (req, res) => {
-  fetch(`${url}${trendingType}?&api_key=${key}&limit=${limit}`)
-    .then(async response => {
-      const data = await response.json()
-
-      res.render('index', {
-        props: data.data,
-        title: 'Home',
-        headTwo: 'The most popular gifs right now'
-
-        // search for gifs, for later? for now just mvp
-        // headTwo: 'Get a Gif!'
-      });
-    });
-});
-
-
-app.get('/gif/:id', (req, res) => {
-  fetch(`${url}${req.params.id}?&api_key=${key}`)
-    .then(async response => {
-      const data = await response.json()
-
-      res.render('detail', {
-        title: 'Detail',
-        headTwo: data.data.title,
-        gif: `https://media.giphy.com/media/${req.params.id}/giphy.gif`,
-        postTime: data.data.import_datetime,
-        source: data.data.source,
-        viewGiphy: data.data.bitly_url
-      });
-    });
-});
-
-
-app.get('/offline', (req, res) => {
-  res.render('offline', {
-    title: 'Offline',
-    headTwo: 'you are currently offline'
-  });
-});
-
-
-// 404 page
-// at the bottom, so it only shows if it doesn't match any of the above
-app.use((req, res) => {
-  res.render('404', {
-    title: '404'
-  });
-});
-
+const PORT = process.env.PORT || 5500;
 
 // listen for requests
 app.listen(PORT, () => {

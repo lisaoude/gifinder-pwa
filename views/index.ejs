@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <%- include('./partials/head.ejs') %>
+<%- include('./partials/head.ejs') %>
 
   <body id='index'>
     <main>
-      <%- include('./partials/nav.ejs') %>
 
       <%- include('./partials/header.ejs') %>
 
-      <!-- maybe later? for now just mvp -->
-      <!-- <%- include('./partials/form.ejs') %> -->
+        <section id="gifContainer">
 
-      <section id="gifContainer">
+          <% props.forEach(item=> { %>
 
-        <% props.forEach(item => { %>
+            <a href="/gif/<%= item.id %>">
+              <img src="https://media.giphy.com/media/<%= item.id %>/giphy.gif" alt="<%= item.title %>">
+            </a>
 
-          <a href="/gif/<%= item.id %>">
-            <img src="https://media.giphy.com/media/<%= item.id %>/giphy.gif" alt="<%= item.title %>">
-          </a>
+            <% }); %>
 
-        <% }); %>
+        </section>
 
-      </section>
-
-      <%- include('./partials/footer.ejs') %>
+        <%- include('./partials/footer.ejs') %>
 
     </main>
   </body>
-  
+
 </html>

@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <%- include('./partials/head.ejs') %>
+<%- include('./partials/head.ejs') %>
 
   <body id='detail'>
     <main>
       <%- include('./partials/nav.ejs') %>
 
-      <%- include('./partials/header.ejs') %>
+        <%- include('./partials/header.ejs') %>
 
-      <section id='all'>
-       
-        <img src="<%= gif %>">
-        
-        <section id='detailSection'>
-          <h3>Gif Details</h3>
+          <section id='all'>
 
-          <h4>Posted at</h4>
-          <p><%= postTime %></p>
+            <img src="<%= gif %>">
 
-          <h4>Orginal source</h4>
-            <p><%= source %></p>
+            <section id='detailSection'>
+              <h3>Gif Details</h3>
 
-          <a href="<%= viewGiphy %>">
-            <h4>Wanna view on Giphy.com? Click!</h4>
-          </a>
-        </section>
+              <h4>Posted at</h4>
+              <p>
+                <%= postTime %>
+              </p>
 
-      </section>
+              <h4>Orginal source</h4>
+              <p>
+                <%= source %>
+              </p>
 
-      <%- include('./partials/footer.ejs') %>
-    
+              <a href="<%= viewGiphy %>">
+                <h4>Wanna view on Giphy.com? Click!</h4>
+              </a>
+            </section>
+
+          </section>
+
+          <%- include('./partials/footer.ejs') %>
+
     </main>
   </body>
-  
+
 </html>

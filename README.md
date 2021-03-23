@@ -318,6 +318,9 @@ I installed compression, because it  ensures that JSON and other static file res
 npm i compression
 ```
 ```
+const compression = require('compression');
+```
+```
 app.use(compression());
 ```
 
