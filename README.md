@@ -228,6 +228,23 @@ import {
 
 ### :gift: Used packages
 
+#### nodemon
+[Nodemon](https://www.npmjs.com/package/nodemon) is a tool that helps with the development of node.js based applications. The nodemon package restarts the node application automatically when any file changes are made inside the directory.
+
+</br>
+
+I installed nodemon to quickly see wether the changes I made caused any errors, and also for the convenience that comes with automatic restarts.
+
+```
+npm install -g nodemon
+```
+
+</br>
+
+#### express
+[Express](https://www.npmjs.com/package/nodemon) is a node.js framework, which contains features for applications. 
+
+
 ---
 
 <!-------------------------- New Paragraph -------------------------->
