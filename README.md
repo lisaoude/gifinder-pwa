@@ -38,9 +38,9 @@ Gifinder is a server side rendering application.
   <!-- - [Folders & Files](#open_file_folder-Folders-&-files) -->
 - [Used Packages](#gift-Used-Packages)
 - [Install](#inbox_tray-Install)
-- [License](#closed_lock_with_key-License)
 - [Next Steps](#telescope-Next-Steps)
-- [Resources](#books-Resources)
+- [License](#closed_lock_with_key-License)
+- [Sources](#books-Sources)
 
 <br/>
 
@@ -220,15 +220,16 @@ import {
 - This file is used to trigger the router and get Gifinder started.
 
 <br/> 
+-->
 
 ---
--->
+
 
 <!-------------------------- New Paragraph -------------------------->
 
-### :gift: Used packages
+## :gift: Used packages
 
-#### nodemon
+### :smiling_imp: nodemon
 [Nodemon](https://www.npmjs.com/package/nodemon) is a tool that helps with the development of node.js based applications. The nodemon package restarts the node application automatically when any file changes are made inside the directory.
 
 </br>
@@ -236,13 +237,91 @@ import {
 I installed nodemon to quickly see wether the changes I made caused any errors, and also for the convenience that comes with automatic restarts.
 
 ```
-npm install -g nodemon
+npm i -g nodemon
 ```
 
 </br>
 
-#### express
-[Express](https://www.npmjs.com/package/nodemon) is a node.js framework, which contains features for applications. 
+### :monorail: express
+[Express](https://www.npmjs.com/package/nodemon) is a node.js framework. 
+
+</br>
+
+I installed express, because this package makes routing via the server easier. Another reason for installing express, was the support for many template engines, as I used one for this project, but hadn't decided on one just yet.
+
+```
+npm i express
+```
+```
+const express = require('express');
+```
+
+</br>
+
+### :memo: ejs
+[Ejs](https://www.npmjs.com/package/ejs) is a template engine that makes it possible for JavaScript code to be injected into the client.
+
+</br>
+
+I installed ejs, because the package is easy to understand, has a gentle, gradual learning curve (which makes it great for newbies - like me!) and using the package makes it easier to inject dat from the server into the client.
+
+```
+npm i ejs
+```
+```
+app.set('view engine', 'ejs');
+```
+
+</br>
+
+### :large_blue_circle: dotenv
+[Dotenv](https://www.npmjs.com/package/dotenv) is a package that loads variables from a ```.env``` file.
+
+</br>
+
+I installed dotenv, because it helps to store sensitive data (such as the API key), which can then be hidden from the GitHUb repository using my ```.gitignore``` file.
+
+```
+npm i dotenv
+```
+```
+require('dotenv').config();
+```
+
+</br>
+
+### :dog::soccer: node-fetch
+[Node-fetch](https://www.npmjs.com/package/node-fetch) is a module which works just like the ```window.fetch``` methode does client side, but for the server side.
+
+</br>
+
+I installed node-fetch, because it allows me to do an API fetch via the server side.
+
+```
+npm i node-fetch
+```
+```
+const fetch = require('node-fetch');
+```
+
+</br>
+
+### :arrow_double_down: compression
+[Compression](https://www.npmjs.com/package/compression) is node.js compression middleware. 
+
+</br>
+
+I installed compression, because it  ensures that JSON and other static file responses are smaller.
+
+
+```
+npm i compression
+```
+```
+app.use(compression());
+```
+
+</br>
 
 
 ---
@@ -288,16 +367,6 @@ Almost done! We just need to navigate to the localhost in the browser.
 
 <!-------------------------- New Paragraph -------------------------->
 
-## :closed_lock_with_key: License
-
-This repository is licensed as [MIT](https://github.com/lisaoude/progressive-web-apps-2021/blob/master/LICENSE) by © Lisa Oude Elferink, 2021
-
-<br/>
-
----
-
-<!-------------------------- New Paragraph -------------------------->
-
 ## :telescope: Next Steps
 
 We all know creative developing projects are never _truly_ done..  
@@ -327,7 +396,17 @@ These are some next steps that I would love to make:
 
 <!-------------------------- New Paragraph -------------------------->
 
-## :books: Resources
+## :closed_lock_with_key: License
+
+This repository is licensed as [MIT](https://github.com/lisaoude/progressive-web-apps-2021/blob/master/LICENSE) by © Lisa Oude Elferink, 2021
+
+<br/>
+
+---
+
+<!-------------------------- New Paragraph -------------------------->
+
+## :books: Sources
 
 - Schepenaar, W. (2018, June 12). Server-side vs Client-side Routing. Retrieved March 8, 2021, from [Medium](https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f)
 - Ian Schoonover. (2020, June 27). How to Install Node JS on Windows 10. Retrieved March 8, 2021, from [YouTube](https://www.youtube.com/watch?v=AuCuHvgOeBY)
