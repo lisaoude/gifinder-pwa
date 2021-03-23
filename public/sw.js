@@ -1,5 +1,5 @@
 const staticCacheName = 'site-static';
-const assets = ['/', 'styles.css']
+const assets = ['/styles/styles.css', '/manifest.json', '/scripts/script.js', '/offline']
 
 // install service worker
 self.addEventListener('install', (event) => {
@@ -8,6 +8,8 @@ self.addEventListener('install', (event) => {
       .then(cache => {
         console.log('caching shell assets');
         cache.addAll(assets);
+      }).then(() => {
+        self.skipWaiting()
       })
   );
 });
@@ -24,11 +26,10 @@ self.addEventListener('fetch', (event) => {
     // check if request already exists in the cache, else fetch it
     caches.match(event.request)
       .then(cacheRes => {
-        return cacheRes || fetch(event.request);
-      })
-      .catch((err) => {
-        return caches.open(staticCacheName)
-          .then(cache => cache.match('/'))
+        return cacheRes || fetch(event.request).catch((err) => {
+          return caches.open(staticCacheName)
+            .then(cache => cache.match('/offline'))
+        })
       })
   );
 });
