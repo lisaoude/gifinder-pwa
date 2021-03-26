@@ -72,10 +72,10 @@ Gifinder is a server side rendering application.
 
 ## :muscle::boom: Performance
 
-To improved the performance of my Web App, I ran it through the Chrome Lighthouse tool three separate times. 
+To improve the performance of my Web App, I ran it through the Chrome Lighthouse tool three separate times. 
 
 #### Lighthouse test 1 - No optimizations added 
-First, I ran mu Web App through as it was - no performance based optimizations added.
+First, I ran my Web App through as it was - no performance based optimizations added.
 As you can see, ...
 <!-- Add picture here -->
 <!-- !!!!!!!!! -->
@@ -87,7 +87,7 @@ As you can see, ...
 
 
 #### Lighthouse test 2 - Compression
-On my second test run, I didn't yet implement any of the tips Lighthouse gave me on the first try, but I did install and use a package called [compression](#arrow_double_down-compression). 
+On my second test run, I didn't yet implement any of the tips Lighthouse gave me on the first try, but I did install and use a package called [compression](#arrow_double_down-compression).  
 As you can see, ...
 <!-- Add picture here -->
 <!-- !!!!!!!!! -->
@@ -99,7 +99,7 @@ As you can see, ...
 
 
 #### Lighthouse final test - Gulp
-On my final test run, I implemented Lighthouse's tips from the first and second run and installed and used a package called [gulp](:tropical_drink-gulp)
+On my final test run, I implemented Lighthouse's tips from the first and second run and installed and used a package called [gulp](:tropical_drink-gulp).  
 As you can see, ...
 <!-- Add picture here -->
 <!-- !!!!!!!!! -->
@@ -178,10 +178,12 @@ movie/${movieID}/watch/providers
 search/movie
 Based on these parameters, it can be seen that I show discovery movies, a specific movie, recommended movies based on a specific movie, the places where this specific movie can be viewed and the user can search for movies.
 
+-->
+
 <br/> 
 
 ---
--->
+
 
 <!-------------------------- New Paragraph -------------------------->
 
@@ -324,7 +326,7 @@ common tasks:
 Before we can get started, we'll need to clone this repo.
 This can be done by typing the following line of code into your terminal:
 
-`git clone https://github.com/lisaoude/gifinder-pwa.git`
+```git clone https://github.com/lisaoude/gifinder-pwa.git```
 
 <br/>
 
@@ -332,7 +334,7 @@ This can be done by typing the following line of code into your terminal:
 
 Next, we will have to install the used packages.
 
-`npm install `
+```npm install ```
 
 <br/>
 
@@ -340,7 +342,7 @@ Next, we will have to install the used packages.
 
 This can be done by typing the following line of code into your terminal:
 
-`npm run dev`
+```npm run dev```
 
 <br/>
 
@@ -348,7 +350,7 @@ This can be done by typing the following line of code into your terminal:
 
 Almost done! We just need to navigate to the localhost in the browser.
 
-`http://localhost:5500/`
+```http://localhost:5500/```
 
 <br/>
 
