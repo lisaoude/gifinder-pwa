@@ -326,7 +326,9 @@ common tasks:
 Before we can get started, we'll need to clone this repo.
 This can be done by typing the following line of code into your terminal:
 
-```git clone https://github.com/lisaoude/gifinder-pwa.git```
+```
+git clone https://github.com/lisaoude/gifinder-pwa.git
+```
 
 <br/>
 
@@ -334,7 +336,9 @@ This can be done by typing the following line of code into your terminal:
 
 Next, we will have to install the used packages.
 
-```npm install ```
+```
+npm install
+```
 
 <br/>
 
@@ -342,7 +346,9 @@ Next, we will have to install the used packages.
 
 This can be done by typing the following line of code into your terminal:
 
-```npm run dev```
+```
+npm run dev
+```
 
 <br/>
 
@@ -350,7 +356,9 @@ This can be done by typing the following line of code into your terminal:
 
 Almost done! We just need to navigate to the localhost in the browser.
 
-```http://localhost:5500/```
+```
+http://localhost:5500/
+```
 
 <br/>
 
