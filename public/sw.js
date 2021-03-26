@@ -1,9 +1,8 @@
 const staticCacheName = 'site-static-v3';
-const dynamicCacheName = 'site-dynamic-v5';
+const dynamicCacheName = 'site-dynamic-v2';
 const assets = [
   '/offline',
   '/manifest.json',
-  '/styles/styles.css',
   '/buildcss/styles.css',
   '/scripts/script.js'
 ];
@@ -33,7 +32,6 @@ self.addEventListener('install', (event) => {
 
 // activate service worker
 self.addEventListener('activate', (event) => {
-  // console.log('service worker has been activated');
   event.waitUntil(
     caches.keys().then(keys => {
       return Promise.all(keys
@@ -46,7 +44,6 @@ self.addEventListener('activate', (event) => {
 
 // fetch event
 self.addEventListener('fetch', (event) => {
-  // console.log('fetch event', event);
   event.respondWith(
     caches.match(event.request).then(cacheRes => {
       return cacheRes || fetch(event.request).then(fetchRes => {
@@ -61,3 +58,4 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
+
