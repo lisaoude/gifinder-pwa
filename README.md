@@ -27,6 +27,7 @@ Gifinder is a server side rendering application.
 
 - [What does this Web App do?](#gem-What-does-this-Web-App-do?)
 - [API](#link-API)
+- [Performance](#muscle-boom-Performance)
 - [Used Packages](#gift-Used-Packages)
 - [Install](#inbox_tray-Install)
 - [Next Steps](#telescope-Next-Steps)
@@ -52,8 +53,9 @@ Gifinder is a server side rendering application.
 
 ### Performance based features
 - Gifinder uses a packages called ```compression```, which ensures that JSON and other static file responses are smaller
-<!-- - Uses gulp to optimize assets like CSS, JS and images 
-- Scores 100 on all options in Chrome Lighthouse  -->
+- Uses gulp to optimize CSS
+- Scores 100 on 4 out of 5 options in Chrome Lighthouse  
+- More about performance below :arrow_down:!
 
 <br/> 
 
@@ -67,6 +69,56 @@ Gifinder is a server side rendering application.
 ---
 
 <!-------------------------- New Paragraph -------------------------->
+
+## :muscle::boom: Performance
+
+To improved the performance of my Web App, I ran it through the Chrome Lighthouse tool three separate times. 
+
+#### Lighthouse test 1 - No optimizations added 
+First, I ran mu Web App through as it was - no performance based optimizations added.
+As you can see, ...
+<!-- Add picture here -->
+<!-- !!!!!!!!! -->
+<!-- !!!!!!!!! -->
+<!-- !!!!!!!!! -->
+<!-- !!!!!!!!! -->
+<!-- !!!!!!!!! -->
+<!-- !!!!!!!!! -->
+
+
+#### Lighthouse test 2 - Compression
+On my second test run, I didn't yet implement any of the tips Lighthouse gave me on the first try, but I did install and use a package called [compression](#arrow_double_down-compression). 
+As you can see, ...
+<!-- Add picture here -->
+<!-- !!!!!!!!! -->
+<!-- !!!!!!!!! -->
+<!-- !!!!!!!!! -->
+<!-- !!!!!!!!! -->
+<!-- !!!!!!!!! -->
+<!-- !!!!!!!!! -->
+
+
+#### Lighthouse final test - Gulp
+On my final test run, I implemented Lighthouse's tips from the first and second run and installed and used a package called [gulp](:tropical_drink-gulp)
+As you can see, ...
+<!-- Add picture here -->
+<!-- !!!!!!!!! -->
+<!-- !!!!!!!!! -->
+<!-- !!!!!!!!! -->
+<!-- !!!!!!!!! -->
+<!-- !!!!!!!!! -->
+<!-- !!!!!!!!! -->
+
+
+![lighthouse_all_options](https://user-images.githubusercontent.com/57795294/112695644-c2cd6500-8e84-11eb-8e8e-b6942dd72160.png)
+
+
+<br/> 
+
+---
+
+<!-------------------------- New Paragraph -------------------------->
+
 
 ## :link: API
 
@@ -253,6 +305,9 @@ common tasks:
 - concatenation (putting multiple files into one big file)
 - cache busing (letting the browser know if theres a new version of a cached file)
 - testing, linting & optimization
+
+/////////////////////////////////////
+- Uses gulp to optimize CSS (42% (!) of all my code)
 
 
 </br> -->
