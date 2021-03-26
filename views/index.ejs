@@ -12,7 +12,7 @@
         <% props.forEach(item=> { %>
 
           <a href="/gif/<%= item.id %>">
-            <img src="https://media.giphy.com/media/<%= item.id %>/giphy.gif" alt="<%= item.title %>">
+            <img src="<%=item.images.downsized.url %>" alt="<%= item.title %>">
           </a>
 
           <% }); %>
