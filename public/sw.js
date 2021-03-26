@@ -1,5 +1,5 @@
 const staticCacheName = 'site-static-v3';
-const dynamicCacheName = 'site-dynamic-v3';
+const dynamicCacheName = 'site-dynamic-v5';
 const assets = [
   '/offline',
   '/manifest.json',
@@ -60,6 +60,3 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
-
-
-// pogin

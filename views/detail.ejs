@@ -3,39 +3,35 @@
 
 <%- include('./partials/head.ejs') %>
 
-  <body id='detail'>
-    <main>
-      <%- include('./partials/nav.ejs') %>
+  <%- include('./partials/nav.ejs') %>
 
-        <%- include('./partials/header.ejs') %>
+    <%- include('./partials/header.ejs') %>
 
-          <section id='all'>
+      <main id='detail'>
+        <section id='all'>
 
-            <img src="<%= gif %>">
+          <img src="<%= gif %>">
 
-            <section id='detailSection'>
-              <h3>Gif Details</h3>
+          <section id='detailSection'>
+            <h3>Gif Details</h3>
 
-              <h4>Posted at</h4>
-              <p>
-                <%= postTime %>
-              </p>
+            <h4>Posted at</h4>
+            <p>
+              <%= postTime %>
+            </p>
 
-              <h4>Orginal source</h4>
-              <p>
-                <%= source %>
-              </p>
+            <h4>Orginal source</h4>
+            <p>
+              <%= source %>
+            </p>
 
-              <a href="<%= viewGiphy %>">
-                <h4>Wanna view on Giphy.com? Click!</h4>
-              </a>
-            </section>
-
+            <a href="<%= viewGiphy %>">
+              <h4>Wanna view on Giphy.com? Click!</h4>
+            </a>
           </section>
 
-          <%- include('./partials/footer.ejs') %>
+        </section>
 
-    </main>
-  </body>
+        </section>
 
-</html>
+        <%- include('./partials/footer.ejs') %>

@@ -3,26 +3,20 @@
 
 <%- include('./partials/head.ejs') %>
 
-  <body id='index'>
+  <%- include('./partials/header.ejs') %>
+
     <main>
 
-      <%- include('./partials/header.ejs') %>
+      <section id="gifContainer">
 
-        <section id="gifContainer">
+        <% props.forEach(item=> { %>
 
-          <% props.forEach(item=> { %>
+          <a href="/gif/<%= item.id %>">
+            <img src="https://media.giphy.com/media/<%= item.id %>/giphy.gif" alt="<%= item.title %>">
+          </a>
 
-            <a href="/gif/<%= item.id %>">
-              <img src="https://media.giphy.com/media/<%= item.id %>/giphy.gif" alt="<%= item.title %>">
-            </a>
+          <% }); %>
 
-            <% }); %>
+      </section>
 
-        </section>
-
-        <%- include('./partials/footer.ejs') %>
-
-    </main>
-  </body>
-
-</html>
+      <%- include('./partials/footer.ejs') %>

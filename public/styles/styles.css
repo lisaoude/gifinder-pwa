@@ -21,9 +21,6 @@ body {
   background: linear-gradient(-225deg, #050044, #000AFF, #1572FF, #64B5FF);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
-}
-  
-main {
   width: 85%;
   margin: 0 auto;
   margin-top: 3em;
@@ -115,20 +112,7 @@ border-radius: 10px;
 /*****************************************/
 /*          DETAIL PAGE STYLING          */
 /*****************************************/
-/* header */
-#detail header {
-  display: flex;
-  flex-direction: column;
-  width: auto;
-  height: 11em;  
-  margin-bottom: 2em;
-}
-  
-#detail header h2 {
-  font-weight: 600;
-  font-size: 1.5em;     
-}
-  
+
 /* back button */
 .back {
   width: 5em;
@@ -186,7 +170,7 @@ border-radius: 10px;
 }
     
 /* gifs */
-#detail section img {
+#detail #all img {
   width: calc(1.5 * var(--default-width));
   height: auto;
   border-radius: 10px;
@@ -200,6 +184,61 @@ border-radius: 10px;
   
 #detail a {
   text-decoration: none;
+}
+
+
+/*****************************************/
+/*             OFFLINE PAGE              */
+/*****************************************/
+/* back button */
+.back-nav {
+  width: 200px;
+  height: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+  
+.back-nav div {
+  position: relative;
+  top: 18px;
+  left: 5px;
+  width: 40px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 2em;
+}
+  
+.back-nav div::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: -5px;
+  width: 20px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  transform: rotate(45deg)
+}
+  
+.back-nav div::after {
+  position: absolute;
+  content: "";
+  top: -5px;
+  left: -5px;
+  width: 20px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  transform: rotate(-45deg)
+}
+
+.back-nav div p {
+  width: 50px;
+  height: auto;
 }
   
   
