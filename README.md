@@ -233,6 +233,31 @@ app.use(compression());
 </br>
 
 
+<!-- ### :tropical_drink: gulp
+
+!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!
+
+- open source JS toolkit & task runner
+- frontend build system
+- hundreds of plugins available for different tasks
+
+common tasks:
+- minification of scripts and styles
+- concatenation (putting multiple files into one big file)
+- cache busing (letting the browser know if theres a new version of a cached file)
+- testing, linting & optimization
+
+
+</br> -->
+
+
 ---
 
 <!-------------------------- New Paragraph -------------------------->

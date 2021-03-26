@@ -4,6 +4,7 @@ const assets = [
   '/offline',
   '/manifest.json',
   '/styles/styles.css',
+  '/buildcss/styles.css',
   '/scripts/script.js'
 ];
 
@@ -51,7 +52,7 @@ self.addEventListener('fetch', (event) => {
       return cacheRes || fetch(event.request).then(fetchRes => {
         return caches.open(dynamicCacheName).then(cache => {
           cache.put(event.request.url, fetchRes.clone());
-          limitCacheSize(dynamicCacheName, 30)
+          limitCacheSize(dynamicCacheName, 25)
           return fetchRes;
         })
       });
