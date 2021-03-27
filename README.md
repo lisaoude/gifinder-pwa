@@ -15,7 +15,7 @@ By clicking on one of the GIFs, you will see that GIF's title, posted time, orig
 
 Gifinder is a server side rendering application.
 
-[**_My work_** can be viewed right here](https://gifinder-pwa.herokuapp.com/).
+[My work can be viewed right here](https://gifinder-pwa.herokuapp.com/).
 
 <br/>
 
@@ -46,15 +46,14 @@ Gifinder is a server side rendering application.
 ### General features
 - Gifinder can be downloaded, as any good PWA should be 
 - Caches pages both statically and dynamically 
-- Always servers user who have previously visited the web app with the index page, even if they happen to be offline when they visit again
-- Serves the user an offline page when they click on a GIF and happen to be offline
+- Serves the user an offline page when they happen to be offline
 
 <br/> 
 
 ### Performance based features
 - Gifinder uses a packages called ```compression```, which ensures that JSON and other static file responses are smaller
 - Uses gulp to optimize CSS
-- Scores 100 on 4 out of 5 options in Chrome Lighthouse  
+- Scores above 90 on 3 out of 4 options in Chrome Lighthouse  
 - More about performance below :arrow_down:!
 
 <br/> 
@@ -63,55 +62,6 @@ Gifinder is a server side rendering application.
 - Fetch & show the trending GIFs on load
 - Fetch & show the user the GIF and details of the GIF they clicked on
 - Provide the user with feedback when hovering over a GIF
-
-<br/> 
-
----
-
-<!-------------------------- New Paragraph -------------------------->
-
-## :muscle::boom: Performance
-
-To improve the performance of my Web App, I ran it through the Chrome Lighthouse tool three separate times. 
-
-#### Lighthouse test 1 - No optimizations added 
-First, I ran my Web App through as it was - no performance based optimizations added.
-As you can see, ...
-<!-- Add picture here -->
-<!-- !!!!!!!!! -->
-<!-- !!!!!!!!! -->
-<!-- !!!!!!!!! -->
-<!-- !!!!!!!!! -->
-<!-- !!!!!!!!! -->
-<!-- !!!!!!!!! -->
-
-
-#### Lighthouse test 2 - Compression
-On my second test run, I didn't yet implement any of the tips Lighthouse gave me on the first try, but I did install and use a package called [compression](#arrow_double_down-compression).  
-As you can see, ...
-<!-- Add picture here -->
-<!-- !!!!!!!!! -->
-<!-- !!!!!!!!! -->
-<!-- !!!!!!!!! -->
-<!-- !!!!!!!!! -->
-<!-- !!!!!!!!! -->
-<!-- !!!!!!!!! -->
-
-
-#### Lighthouse final test - Gulp
-On my final test run, I implemented Lighthouse's tips from the first and second run and installed and used a package called [gulp](:tropical_drink-gulp).  
-As you can see, ...
-<!-- Add picture here -->
-<!-- !!!!!!!!! -->
-<!-- !!!!!!!!! -->
-<!-- !!!!!!!!! -->
-<!-- !!!!!!!!! -->
-<!-- !!!!!!!!! -->
-<!-- !!!!!!!!! -->
-
-
-![lighthouse_all_options](https://user-images.githubusercontent.com/57795294/112695644-c2cd6500-8e84-11eb-8e8e-b6942dd72160.png)
-
 
 <br/> 
 
@@ -164,26 +114,53 @@ I have implemented the following points into **_Gifinder_**:
 
 <br/>
 
-### :end: Endpoint & parameters
-<!-- The API that was used is the API supplied by The Movie DB. These are public APIs and can be found at the link below:
+---
 
-https://developers.themoviedb.org/3/
+<!-------------------------- New Paragraph -------------------------->
 
-This has been my 'standard' endpoint to which several parameters have been added to retrieve the data. The parameters below were used to obtain the various information:
+## :muscle::boom: Performance
 
-discover/movie
-movie/${movieID}
-movie/${movieID}/recommendations
-movie/${movieID}/watch/providers
-search/movie
-Based on these parameters, it can be seen that I show discovery movies, a specific movie, recommended movies based on a specific movie, the places where this specific movie can be viewed and the user can search for movies.
+To improve the performance of my Web App, I ran it through the Chrome Lighthouse tool at three separate moments during development. In order to get trustworthy outcomes, I ran it through 3 to 5 times for each test, screenshotted all results, and picked the one representing the average outcome (if outcomes were different at all).  
 
--->
+</br>
+
+#### Lighthouse test 1 - No optimizations added 
+First, I ran my Web App through as it was - no performance based optimizations added.
+As you can see, Gifinder scores 67 on performance, 75 on accessibility, 100 on best practices and 73 on SEO. Definitely some room for improvement here! The lowest scoring option here is performance, so lets's take a look at that.  
+![lighthouse_test_1](https://user-images.githubusercontent.com/57795294/112719800-0cf12d80-8efb-11eb-9ae2-74b22b46d37b.png)  
+
+</br>
+
+We can see here that it takes 3.7 seconds for the largest contentful paint to load and 2.7 seconds before the user can interact with Gifinder. Below that we see the suggestion that using video formats for animated content could save a large amount of loading time. I won't put the GIFs inside a video element, because using the image element saves me code (autoplay etc.) and I will take a look at improving the performance in others ways.  
+![lighthouse_test_1_performance](https://user-images.githubusercontent.com/57795294/112720322-e08ae080-8efd-11eb-9762-b3a63ac68a06.png)  
+
+</br>
+
+#### Lighthouse test 2 - Compression
+On my second test run, I didn't yet implement any of the suggestions Lighthouse gave me on the first try, but I did install and use a package called [compression](#arrow_double_down-compression).  
+As you can see, Gifinder now scores 92 on performance!  
+![lighthouse_test_2](https://user-images.githubusercontent.com/57795294/112719802-0cf12d80-8efb-11eb-9b21-c23d6ef8a31d.png)  
+
+</br>
+
+We can see it now only takes 0.8 seconds for the largest contentful paint to load and 1.8 seconds before the user can interact with Gifinder.  
+![lighthouse_test_2_performance](https://user-images.githubusercontent.com/57795294/112721848-6ca10600-8f06-11eb-88e2-cf1c0fa63b33.png)  
+
+</br>
+
+#### Lighthouse final test - Gulp
+On my final test run, I implemented Lighthouse's suggestions from the first and second run and installed and used a package called [gulp](:tropical_drink-gulp).  
+As you can see, Gifinder now scores 95 on performance, 100 on accessibility, 100 on best practices and 90 on SEO. Looking pretty good if you ask me :sunglasses:. SEO is 'stuck' at 90, because Lighthouse can't seen to find my meta description, but I can assure you that it's there.  
+![lighthouse_test_3](https://user-images.githubusercontent.com/57795294/112720198-357a2700-8efd-11eb-9140-80e6835c335a.png)  
+
+</br>
+
+We now see that there's only 0.8 seconds difference between the first and largest contentful paint and users can interact with Gifinder after 0.4 seconds! The suggestion about putting the GIFs inside video elements is still there, but the time went down from nearly 60 seconds to 20 seconds, so i'll take it for now! GIFs just take a long time to load and that won't change, so this is already great in my opinion.  
+![lighthouse_test_3_performance](https://user-images.githubusercontent.com/57795294/112721914-c3a6db00-8f06-11eb-9a57-afe80567511e.png)  
 
 <br/> 
 
 ---
-
 
 <!-------------------------- New Paragraph -------------------------->
 
@@ -287,33 +264,15 @@ app.use(compression());
 </br>
 
 
-<!-- ### :tropical_drink: gulp
+### :tropical_drink: gulp
+[Gulp](https://www.npmjs.com/package/gulp) is a frontend build system with hundreds of plugins available for different tasks.
 
-!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!
+</br>
 
-- open source JS toolkit & task runner
-- frontend build system
-- hundreds of plugins available for different tasks
+I used gulp to minify my CSS with the plugin ```gulp-cleanCSS```, which is a CSS optimizer!  
+I have only minified my CSS, because it's my largest file of all (42% of all my code). My client side JavaScript is a single file with about 8 lines, so that'll do just fine without minification.
 
-common tasks:
-- minification of scripts and styles
-- concatenation (putting multiple files into one big file)
-- cache busing (letting the browser know if theres a new version of a cached file)
-- testing, linting & optimization
-
-/////////////////////////////////////
-- Uses gulp to optimize CSS (42% (!) of all my code)
-
-
-</br> -->
-
+</br>
 
 ---
 
@@ -373,7 +332,7 @@ These are some next steps that I would love to make:
 
 - Make it possible to let the users search for GIFs
 - Let the users save GIFs to a favorites list
-- Let the users save GIFs to a special collection, which the user can name themselves (e.g. funny gifs, cat gifs, etc.)
+- Let the users save GIFs to a special collection, which the user can name themselves (e.g. funny GIFs, cat GIFs, etc.)
 - Give Gifinder a random mode, which returns a random GIF to the user after a button press
 - Autocomplete user input with a list of valid terms that completes what the user has typed into the input field
 - Provide users with a list of GIF categories
@@ -408,64 +367,6 @@ This repository is licensed as [MIT](https://github.com/lisaoude/progressive-web
 - npm: node-fetch. (2020, September 5). Retrieved March 16, 2021, from [NPMjs.com](https://www.npmjs.com/package/node-fetch)
 - The Net Ninja. (2019). PWA Tutorial for Beginners. Retrieved March 22, 2021, from [YouTube](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gTxqJBcDmoi5Q2pzDusSL7)
 - npm: compression. (2019, March 18). Retrieved March 23, 2021, from [NPMjs.com](https://www.npmjs.com/package/compression)
-
-
-<!-- Notes Node.js Crash Course
-
-## #2 - Node.js Basics
-### Browser VS Node
-In the browser
-- Window is the global object
-  - Like window.setTimeout
-  - Window can be left out, because its presence is implied
-
-In node
-- Window is **not** the global object
-  - **Global** is the global object
-  - Represents the global context in a node environment
-
-
-### Global object
-As can be seen above, the global object in node is different from the global object in window.
-This means that most of the things in the window object we can't excess in node, such as DOM methods like the querySelector.
-
-
-### Dirname & Filename
-- dirname = directory name
-  - gets the absolute path of the current folder that the file is in
-
-- filename
-  - gets the absolute path of the current folder that the file is in **WITH** the file name added on
-
-
-## #3 - Clients & Servers
-### IP addresses and domains
-GET Request
-- Is made every time we go to a different webpage, either by a link or typing it directly into the address bar
-- We're sending a **GET Request** to the server to get a certain resource (like an HTML webpage)
-  - Communication via HTTP
-
-POST Request
-- Used to send data to a server from something like a webform
-
-
-### Creating a server
-In node, you manually create a server which lives on the back-end of your website.
-This server listens for requests from the browser and then decide what responses to send to the browser.
-
-
-### Localhost & Port numbers
-Localhost
-- Like a domain name you'd use on the web
-
-Port numbers
-- Like a door into a computer
-
-
-
-## #4 - Requests & Responses
-### Request object
-
-### Response object
-- What we use to send a response to the browser -->
+- npm: gulp. (2019, May 6). Retrieved March 25, 2021, from [NPMjs.com](https://www.npmjs.com/package/gulp)
+- npm: gulp-cleancss. (2014, June 16). Retrieved March 25, 2021, from [NPMjs.com](https://www.npmjs.com/package/gulp-cleancss)
 
