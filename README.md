@@ -13,7 +13,7 @@ _Made for Progressive Web App [@ cmda-minor-web 2020 - 2021](https://github.com/
 Always wanted to quickly see the trending GIFs? **_Gifinder_** is here! On load, you will get 24 GIFs that meet your requirements!
 By clicking on one of the GIFs, you will see that GIF's title, posted time, original source and a link to view the GIF at [Giphy.com](https://giphy.com).
 
-Gifinder is a server side rendering application.
+Gifinder is a server-side rendering application.
 
 [My work can be viewed right here](https://gifinder-pwa.herokuapp.com/).
 
@@ -51,7 +51,7 @@ Gifinder is a server side rendering application.
 </br> 
 
 ### Performance based features
-- Gifinder uses a packages called ```compression```, which ensures that JSON and other static file responses are smaller
+- Gifinder uses a package called ```compression```, which ensures that JSON and other static file responses are smaller
 - Uses gulp to optimize CSS
 - Scores above 90 on 3 out of 4 options in Chrome Lighthouse  
 - [More about performance later!](#muscle-boom-Performance)
@@ -121,11 +121,18 @@ Gifinder uses one main endpoint, which can be seen below.
 https://api.giphy.com/v1/gifs/[parameters here]?&api_key=${key}`
 ```  
 
+</br>
+
 I used the parameters below to get different data.
 - `${trendingType}`
 - `${req.params.id}`
 
+</br>
+
 The `${trendingType}` parameter fetches the trending GIFs at the moment. When using the trendingType parameter, the following needs to be added at the very end `&limit=24`. The limit can be changed to any number.  
+
+</br>
+
 The `${req.params.id}` parameter fetches a specific GIF by ID and gets the data that belongs to that ID.
 
 </br>
@@ -138,13 +145,13 @@ After making a request to the API, you will receive some information about the G
 "type":                // the type of image (mostly all GIFs)
 "id":                  // unique ID of the GIF
 "url":                 // URL of the GIF, on Giphy.com
-"slug":                // GIfs unique slug (used in the url)
+"slug":                // GIFs unique slug (used in the url)
 "bitly_gif_url":       // short URL, linking to Giphy.com
 "bitly_url":           // short URL, linking to Giphy.com
 "embed_url":           // embed URL
 "username":            // username of who posted the GIF
 "source":              // original source of the GIF
-"title":               // GIFs title
+"title":               // GIF's title
 "rating":              // GIFs MPAA-style rating, such as Y, G, PG, PG-13 and R
 "content_url":         // content URL, currently unused by Giphy
 "source_tld":          // top level domain of the original source
@@ -170,8 +177,8 @@ To improve the performance of my Web App, I ran it through the Chrome Lighthouse
 <br/> 
 
 ### Lighthouse test 1 - No optimizations added 
-First, I ran my Web App through as it was - no performance based optimizations added.
-As you can see, Gifinder scores 67 on performance, 75 on accessibility, 100 on best practices and 73 on SEO. Definitely some room for improvement here! The lowest scoring option here is performance, so lets's take a look at that.  
+First, I ran my Web App through as it was - no performance-based optimizations added.
+As you can see, Gifinder scores 67 on performance, 75 on accessibility, 100 on best practices and 73 on SEO. Definitely some room for improvement here! The lowest scoring option here is performance, so lets take a look at that.  
 
 </br>
 
@@ -179,7 +186,7 @@ As you can see, Gifinder scores 67 on performance, 75 on accessibility, 100 on b
 
 </br>
 
-We can see here that it takes 3.7 seconds for the largest contentful paint to load and 2.7 seconds before the user can interact with Gifinder. Below that we see the suggestion that using video formats for animated content could save a large amount of loading time. I won't put the GIFs inside a video element, because using the image element saves me code (autoplay etc.) and I will take a look at improving the performance in others ways.  
+We can see here that it takes 3.7 seconds for the largest contentful paint to load and 2.7 seconds before the user can interact with Gifinder. Below that we see the suggestion that using video formats for animated content could save a large amount of loading time. I won't put the GIFs inside a video element, because using the image element saves me code (autoplay etc.) and I will take a look at improving the performance in other ways.  
 
 </br>
 
@@ -206,8 +213,8 @@ We can see it now only takes 0.8 seconds for the largest contentful paint to loa
 </br>
 
 ### Lighthouse final test - Gulp
-On my final test run, I implemented Lighthouse's suggestions from the first and second run and installed and used a package called [gulp](:tropical_drink-gulp).  
-As you can see, Gifinder now scores 95 on performance, 100 on accessibility, 100 on best practices and 90 on SEO. Looking pretty good if you ask me :sunglasses:. SEO is 'stuck' at 90, because Lighthouse can't seen to find my meta description, but I can assure you that it's there.  
+On my final test run, I implemented Lighthouse's suggestions from the first and second run. The biggest change here, is that I'm now using downsized GIFs instead of way too large GIFs I was previously using. I also installed and used a package called [gulp](:tropical_drink-gulp).  
+As you can see, Gifinder now scores 95 on performance, 100 on accessibility, 100 on best practices and 90 on SEO. Looking pretty good if you ask me :sunglasses:. SEO is 'stuck' at 90, because Lighthouse can't seem to find my meta description, but I can assure you that it's there.  
 
 </br>
 
@@ -215,20 +222,13 @@ As you can see, Gifinder now scores 95 on performance, 100 on accessibility, 100
 
 </br>
 
-We now see that there's only 0.8 seconds difference between the first and largest contentful paint and users can interact with Gifinder after 0.4 seconds! The suggestion about putting the GIFs inside video elements is still there, but the time went down from nearly 60 seconds to 20 seconds, so i'll take it for now! GIFs just take a long time to load and that won't change, so this is already great in my opinion.  
+We now see that there's only 0.8 seconds difference between the first and largest contentful paint and users can interact with Gifinder after 0.4 seconds! The suggestion about putting the GIFs inside video elements is still there, but the time went down from nearly 60 seconds to 20 seconds, so I'll take it for now! GIFs just take a long time to load and that won't change, so this is already great in my opinion.  
 
 </br>
 
 ![lighthouse_test_3_performance](https://user-images.githubusercontent.com/57795294/112721914-c3a6db00-8f06-11eb-9a57-afe80567511e.png)  
 
 </br> 
-
-### Optimization summary
-- Implemented compression
-- Implemented gulp
-- Now using downsized GIFs
-
-</br>
 
 ---
 
@@ -241,7 +241,7 @@ We now see that there's only 0.8 seconds difference between the first and larges
 
 </br>
 
-I installed nodemon to quickly see wether the changes I made caused any errors, and also for the convenience that comes with automatic restarts.
+I installed nodemon to quickly see whether the changes I made caused any errors, and also for the convenience that comes with automatic restarts.
 
 ```
 npm i -g nodemon
@@ -270,7 +270,7 @@ const express = require('express');
 
 </br>
 
-I installed ejs, because the package is easy to understand, has a gentle, gradual learning curve (which makes it great for newbies - like me!) and using the package makes it easier to inject dat from the server into the client.
+I installed ejs, because the package is easy to understand, has a gentle, gradual learning curve (which makes it great for newbies - like me!) and using the package makes it easier to inject data from the server into the client.
 
 ```
 npm i ejs
@@ -286,7 +286,7 @@ app.set('view engine', 'ejs');
 
 </br>
 
-I installed dotenv, because it helps to store sensitive data (such as the API key), which can then be hidden from the GitHUb repository using my ```.gitignore``` file.
+I installed dotenv, because it helps to store sensitive data (such as the API key), which can then be hidden from the GitHub repository using my ```.gitignore``` file.
 
 ```
 npm i dotenv
@@ -298,7 +298,7 @@ require('dotenv').config();
 </br>
 
 ### :dog::soccer: node-fetch
-[Node-fetch](https://www.npmjs.com/package/node-fetch) is a module which works just like the ```window.fetch``` methode does client side, but for the server side.
+[Node-fetch](https://www.npmjs.com/package/node-fetch) is a module which works just like the ```window.fetch``` method does client side, but for the server side.
 
 </br>
 
@@ -340,7 +340,7 @@ app.use(compression());
 </br>
 
 I used gulp to minify my CSS with the plugin ```gulp-cleanCSS```, which is a CSS optimizer!  
-I have only minified my CSS, because it's my largest file of all (42% of all my code). My client side JavaScript is a single file with about 8 lines, so that'll do just fine without minification.  
+I have only minified my CSS, because it's my largest file of all (42% of all my code). My client-side JavaScript is a single file with about 8 lines, so that'll do just fine without minification.  
 
 ```
 npm i gulp
