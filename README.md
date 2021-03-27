@@ -17,7 +17,7 @@ Gifinder is a server side rendering application.
 
 [My work can be viewed right here](https://gifinder-pwa.herokuapp.com/).
 
-<br/>
+</br> 
 
 ---
 
@@ -34,7 +34,7 @@ Gifinder is a server side rendering application.
 - [License](#closed_lock_with_key-License)
 - [Sources](#books-Sources)
 
-<br/>
+</br>
 
 ---
 
@@ -48,22 +48,22 @@ Gifinder is a server side rendering application.
 - Caches pages both statically and dynamically 
 - Serves the user an offline page when they happen to be offline
 
-<br/> 
+</br> 
 
 ### Performance based features
 - Gifinder uses a packages called ```compression```, which ensures that JSON and other static file responses are smaller
 - Uses gulp to optimize CSS
 - Scores above 90 on 3 out of 4 options in Chrome Lighthouse  
-- More about performance below :arrow_down:!
+- [More about performance later!](#muscle-boom-Performance)
 
-<br/> 
+</br>
 
 ### API based features
 - Fetch & show the trending GIFs on load
 - Fetch & show the user the GIF and details of the GIF they clicked on
 - Provide the user with feedback when hovering over a GIF
 
-<br/> 
+</br>
 
 ---
 
@@ -77,7 +77,7 @@ Gifinder is a server side rendering application.
 This Web App has been designed and developed with the [the Giphy API](https://developers.giphy.com/docs/api/).
 Giphy has the largest GIF library in the world and their API makes it possible to seamlessly integrate these GIFs into any application.
 
-<br/>
+</br>
 
 ### :eyes: What can you do with this API?
 
@@ -95,7 +95,7 @@ _All information can also be found on [the Giphy website](https://giphy.com)_
 - Suggest searches to users
 - Upload content programmatically on Giphy.com
 
-<br/>
+</br>
 
 ### :raising_hand: What did I do with this API?
 
@@ -105,14 +105,59 @@ I have implemented the following points into **_Gifinder_**:
 
 - Show trending GIFs to users on load of the page
 
-<br/>
+</br>
 
 **Detail page**
 
 - Generate a GIF by ID endpoint
 - Generate the details of a GIF by ID endpoint
 
-<br/>
+</br>
+
+### :end: Endpoint & parameters
+Gifinder uses one main endpoint, which can be seen below.  
+
+```
+https://api.giphy.com/v1/gifs/[parameters here]?&api_key=${key}`
+```  
+
+I used the parameters below to get different data.
+- `${trendingType}`
+- `${req.params.id}`
+
+The `${trendingType}` parameter fetches the trending GIFs at the moment. When using the trendingType parameter, the following needs to be added at the very end `&limit=24`. The limit can be changed to any number.  
+The `${req.params.id}` parameter fetches a specific GIF by ID and gets the data that belongs to that ID.
+
+</br>
+
+### :microphone: API response
+After making a request to the API, you will receive some information about the GIFs. Below you can find what information you get and what it means.
+
+```
+{
+"type":                // the type of image (mostly all GIFs)
+"id":                  // unique ID of the GIF
+"url":                 // URL of the GIF, on Giphy.com
+"slug":                // GIfs unique slug (used in the url)
+"bitly_gif_url":       // short URL, linking to Giphy.com
+"bitly_url":           // short URL, linking to Giphy.com
+"embed_url":           // embed URL
+"username":            // username of who posted the GIF
+"source":              // original source of the GIF
+"title":               // GIFs title
+"rating":              // GIFs MPAA-style rating, such as Y, G, PG, PG-13 and R
+"content_url":         // content URL, currently unused by Giphy
+"source_tld":          // top level domain of the original source
+"source_post_url":     // URL of the webpage on which the GIF was found
+"is_sticker":          // stating if the GIF can be used as a web sticker
+"import_datetime":     // the creation or upload date from the GIF
+"trending_datetime":   // the date on which this GIF was marked as trending
+"images": {}           // containing data for different formats and sizes of the GIF
+                       // such as original, downsized, fixed-height, fixed-width and stills
+}
+```
+
+</br>
 
 ---
 
@@ -122,43 +167,68 @@ I have implemented the following points into **_Gifinder_**:
 
 To improve the performance of my Web App, I ran it through the Chrome Lighthouse tool at three separate moments during development. In order to get trustworthy outcomes, I ran it through 3 to 5 times for each test, screenshotted all results, and picked the one representing the average outcome (if outcomes were different at all).  
 
-</br>
+<br/> 
 
-#### Lighthouse test 1 - No optimizations added 
+### Lighthouse test 1 - No optimizations added 
 First, I ran my Web App through as it was - no performance based optimizations added.
 As you can see, Gifinder scores 67 on performance, 75 on accessibility, 100 on best practices and 73 on SEO. Definitely some room for improvement here! The lowest scoring option here is performance, so lets's take a look at that.  
+
+</br>
+
 ![lighthouse_test_1](https://user-images.githubusercontent.com/57795294/112719800-0cf12d80-8efb-11eb-9ae2-74b22b46d37b.png)  
 
 </br>
 
 We can see here that it takes 3.7 seconds for the largest contentful paint to load and 2.7 seconds before the user can interact with Gifinder. Below that we see the suggestion that using video formats for animated content could save a large amount of loading time. I won't put the GIFs inside a video element, because using the image element saves me code (autoplay etc.) and I will take a look at improving the performance in others ways.  
+
+</br>
+
 ![lighthouse_test_1_performance](https://user-images.githubusercontent.com/57795294/112720322-e08ae080-8efd-11eb-9762-b3a63ac68a06.png)  
 
 </br>
 
-#### Lighthouse test 2 - Compression
+### Lighthouse test 2 - Compression
 On my second test run, I didn't yet implement any of the suggestions Lighthouse gave me on the first try, but I did install and use a package called [compression](#arrow_double_down-compression).  
 As you can see, Gifinder now scores 92 on performance!  
+
+</br>
+
 ![lighthouse_test_2](https://user-images.githubusercontent.com/57795294/112719802-0cf12d80-8efb-11eb-9b21-c23d6ef8a31d.png)  
 
 </br>
 
 We can see it now only takes 0.8 seconds for the largest contentful paint to load and 1.8 seconds before the user can interact with Gifinder.  
+
+</br>
+
 ![lighthouse_test_2_performance](https://user-images.githubusercontent.com/57795294/112721848-6ca10600-8f06-11eb-88e2-cf1c0fa63b33.png)  
 
 </br>
 
-#### Lighthouse final test - Gulp
+### Lighthouse final test - Gulp
 On my final test run, I implemented Lighthouse's suggestions from the first and second run and installed and used a package called [gulp](:tropical_drink-gulp).  
 As you can see, Gifinder now scores 95 on performance, 100 on accessibility, 100 on best practices and 90 on SEO. Looking pretty good if you ask me :sunglasses:. SEO is 'stuck' at 90, because Lighthouse can't seen to find my meta description, but I can assure you that it's there.  
+
+</br>
+
 ![lighthouse_test_3](https://user-images.githubusercontent.com/57795294/112720198-357a2700-8efd-11eb-9140-80e6835c335a.png)  
 
 </br>
 
 We now see that there's only 0.8 seconds difference between the first and largest contentful paint and users can interact with Gifinder after 0.4 seconds! The suggestion about putting the GIFs inside video elements is still there, but the time went down from nearly 60 seconds to 20 seconds, so i'll take it for now! GIFs just take a long time to load and that won't change, so this is already great in my opinion.  
+
+</br>
+
 ![lighthouse_test_3_performance](https://user-images.githubusercontent.com/57795294/112721914-c3a6db00-8f06-11eb-9a57-afe80567511e.png)  
 
-<br/> 
+</br> 
+
+### Optimization summary
+- Implemented compression
+- Implemented gulp
+- Now using downsized GIFs
+
+</br>
 
 ---
 
@@ -270,7 +340,14 @@ app.use(compression());
 </br>
 
 I used gulp to minify my CSS with the plugin ```gulp-cleanCSS```, which is a CSS optimizer!  
-I have only minified my CSS, because it's my largest file of all (42% of all my code). My client side JavaScript is a single file with about 8 lines, so that'll do just fine without minification.
+I have only minified my CSS, because it's my largest file of all (42% of all my code). My client side JavaScript is a single file with about 8 lines, so that'll do just fine without minification.  
+
+```
+npm i gulp
+```
+```
+"build": "node build/build-css.js"
+```
 
 </br>
 
